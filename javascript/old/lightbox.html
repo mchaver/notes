@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8" />
+ <title>Lightbox</title>
+ <style>
+  .black-overlay {
+   opacity: 0.4;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: black;
+   width: 100%;
+   height: 100%;
+   z-index: 1001;
+  }
+  .light-box {
+   display: block;
+   position: fixed;
+   top: 25%;
+   left: 25%;
+   width: 50%;
+   height: 50%;
+   padding: 16px;
+   background-color: white;
+   z-index: 1002;
+   overflow: auto;
+  }
+  .close-light-box {
+   display: none;
+  }
+ </style>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+</head>
+
+<body>
+ <p><a href="#" id="light-box-link">Click to open lightbox.</a></p>
+ <div id="overlay"></div>
+ <div id="light-box" class="close-light-box">You are in the light box. 
+  <a href="#" id="close-light-box-link">Close lightbox.
+  </a>
+ </div>
+ <script type="text/javascript">
+ $("a#light-box-link").click(function(){
+   $("div#overlay").addClass("black-overlay");
+   $("div#light-box").removeClass("close-light-box");
+   $("div#light-box").addClass("light-box");
+   return false;
+ });
+ 
+ $("a#close-light-box-link").click(function(){
+   $("div#overlay").removeClass("black-overlay");
+   $("div#light-box").removeClass("light-box");
+   $("div#light-box").addClass("close-light-box");
+   return false;
+ });
+ </script>
+</body>
+</html>

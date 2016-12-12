@@ -1,0 +1,77 @@
+<!--
+An HTML/CSS only solution for a fixed header, scrollable table and fixed footer. Since the 
+table header, table body, and table footer are in separate tables, the width of the 
+columns must be predetermined because thead and tbody will not resize together. Otherwise, 
+it is necessary to use a client-side solution.
+-->
+<table cellspacing="0" cellpadding="0" border="0" width="500px">
+  <tr>
+    <td>
+       <table cellspacing="0" cellpadding="1" border="1" width="500px" >
+         <thead>
+           <tr>
+              <th>Column 1</th>
+              <th>Column 2</th>
+              <th>Column 3</th>
+           </tr>
+         </thead>  
+       </table>
+    </td>
+  </tr>
+  <tr>
+    <td>
+       <div style="width:500px; height:100px; overflow-y:auto; overflow-x:hidden">
+         <table cellspacing="0" cellpadding="1" border="1" width="500" >
+           <tbody>
+             <tr>
+               <td>col 1 row 1</td>
+               <td>col 2 row 1</td>
+               <td>col 3 row 1</td>
+             </tr>
+             <tr>
+               <td>col 1 row 2</td>
+               <td>col 2 row 2</td>
+               <td>col 3 row 2</td>
+             </tr>
+             <tr>
+               <td>col 1 row 3</td>
+               <td>col 2 row 3</td>
+               <td>col 3 row 3</td>
+             </tr>
+             <tr>
+               <td>col 1 row 4</td>
+               <td>col 2 row 4</td>
+               <td>col 3 row 4</td>
+             </tr>
+             <tr>
+               <td>col 1 row 5</td>
+               <td>col 2 row 5</td>
+               <td>col 3 row 5</td>
+             </tr>
+             <tr>
+               <td>col 1 row 6</td>
+               <td>col 2 row 6</td>
+               <td>col 3 row 6</td>
+             </tr>
+             <tr>
+               <td>col 1 row 7</td>
+               <td>col 2 row 7</td>
+               <td>col 3 row 7</td>
+             </tr>
+           </tbody>
+         </table>  
+       </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+       <table cellspacing="0" cellpadding="1" border="1" width="500px" >
+         <thead>
+           <tr>
+              <th>Footer</th>
+           </tr>
+         </thead>  
+       </table>
+    </td>
+  </tr>
+</table>
